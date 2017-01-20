@@ -1,0 +1,13 @@
+启动方式：
+1、IDEA启动；
+2、mvn spring-boot:run
+3、mvn install --> java -jar xxx.jar
+(例如：java -jar girl-0.0.1-SNAPSHOT.jar；java -jar girl-0.0.1-SNAPSHOT.jar -spring.profiles.active=prod)
+
+Controller使用：
+@Controller -- 处理http请求
+@RestController -- Spring4之后新加的注解，原来返回json需要@ResponseBody配合@Controller
+@RequestMapping -- 配置url映射
+@PathVariable -- 获取url中的数据
+@RequestParam -- 获取请求参数的值
+@GetMapping -- 组合注解
