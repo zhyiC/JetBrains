@@ -45,7 +45,7 @@ public class GirlController {
      * @param id
      * @return
      */
-    @GetMapping(value = "/girlFindOne/{id}")
+    @GetMapping(value = "/girlsFindOne/{id}")
     public Girl girlFindOne(@PathVariable("id") Integer id){
         return girlRepository.findOne(id);
     }
@@ -76,5 +76,15 @@ public class GirlController {
     @DeleteMapping(value = "/girlsDelete/{id}")
     public void girlsDelete(@PathVariable("id") Integer id){
         girlRepository.delete(id);
+    }
+
+    /**
+     * 通过年龄查询女生列表
+     * @param age
+     * @return
+     */
+    @GetMapping(value = "/girlsByAge/{age}")
+    public List<Girl> girlListByAge(@PathVariable("age") Integer age){
+        return girlRepository.findByAge(age);
     }
 }
