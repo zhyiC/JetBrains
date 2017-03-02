@@ -1,4 +1,4 @@
-package redis.test;
+package redis;
 
 import org.junit.Before;
 import org.junit.Test;
